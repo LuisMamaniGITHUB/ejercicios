@@ -71,7 +71,7 @@ public class Desafío_integrador_4to_bim {
 		} catch (InputMismatchException e) {
 			System.out.println("Error: Dato no Valido");
 		} finally {
-			System.out.println("Programa finalizado.");
+			System.out.println("Programa terminado.");
 		}
 
 	}
