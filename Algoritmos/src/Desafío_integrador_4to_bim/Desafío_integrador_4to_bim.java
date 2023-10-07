@@ -64,15 +64,10 @@ public class Desafío_integrador_4to_bim {
 				System.out.println("\nCantidad de intentos " + intentos);
 
 			}
-			
-			if((numero>100)||(numero<1)){
-				throw new IllegalArgumentException	("Número fuera de rango.");
-            }
-			
-		} catch (IllegalArgumentException e) {
-            System.out.println("Error: " + e.getMessage());
 
-		
+			if ((numero > 100) || (numero < 1)) {
+				throw new IllegalArgumentException("Número fuera de rango.");
+			}
 		} catch (InputMismatchException e) {
 			System.out.println("Error: Dato no Valido");
 		} finally {
