@@ -4,59 +4,91 @@ import java.util.Scanner;
 
 public class ejercicio60 {
 	
-	public static int[] arraynotas = new int[3];
-	public static int[] apellidos = new int[3];
+	static int[] arraynotas ;
+	static String[] apellidos ;
+	
+	static int cant_notas;
+	static int cant_apellidos;
 	
 	
+	
+	
+	public static void ingreseCantidad() {
+		
+		 Scanner entrada = new Scanner(System.in);
+		 
+		System.out.println("\nIngrese la cantidad de notas: ");
+		cant_notas = entrada.nextInt();
+	}
 	
 
-	public static void ingresarNumeros() {
+	public static int[] ingresarNotas(int n) {
 	    Scanner entrada = new Scanner(System.in);
 	    
-	    for (int i = 0 ; i<3; i++) {
+	    arraynotas = new int[n];
+	    
+	    for (int i = 0 ; i<n; i++) {
 	    	
 	    System.out.println("\nIngresa una nota: ");
 	    arraynotas[i] = entrada.nextInt();
-	    
-	    }
-	    
-	    
-	    System.out.println("");
-	    
-	    for (int i = 0 ; i<3; i++) {
-	    System.out.println("\nLas notas ingresadas: "+arraynotas[i] );
-	    }
-	    
-	}
 	
-	
-	public static String ingresarApellidos(String a) {
-	    Scanner entrada = new Scanner(System.in);
-	    
-	    for (int i = 0 ; i<3; i++) {
+	    if (arraynotas[i]< 0 ) {
 	    	
-	    System.out.println("\nIngresa un apellido: ");
-	    apellidos[i] = entrada.nextInt();
+	    	 System.out.println("\nIngresa una nota mayor a 0: ");
+	 	    arraynotas[i] = entrada.nextInt();
+	    }
+	    
 	    
 	    }
 	    
-	    return a;
-	    
-	    
-	    
-	    
-	    for (int i = 0 ; i<3; i++) {
-	    System.out.println("\nLos apellidos ingresados: "+apellidos[i] );
-	    }
-	    
+	    return arraynotas;
 	}
 	
 	
-	public static void main (String[] args) {
+	
+	
+		public static String[] ingresarApellidos(int a) {
+		
 		Scanner entrada = new Scanner(System.in);
-	   
-	    ingresarNumeros();
-	    ingresarApellidos();
+
+		
+		 apellidos = new String[a];
+		
+		for (int i = 0; i < a; i++) {
+
+			System.out.println("\nIngrese un apellido: ");
+			apellidos[i] = entrada.next();
+
+		}
+		
+		return apellidos;
+
+		}
+	
+		
+		
+	public static void main (String[] args) {
+	
+	  ingreseCantidad();
+	  
+	  int arrayNumeros[] = ingresarNotas(cant_notas);	
+		String apellidos[] = ingresarApellidos(cant_notas);
+	  
+	  
+	  for (int i = 0; i < cant_notas; i++) {
+	  
+		  System.out.println("\nLas notas son: "+arraynotas[i]);
+		  
+	
+	  }
+	  
+	  for (int i = 0; i < cant_notas; i++) {
+		  
+		  System.out.println("\nLos apellidos son: "+apellidos[i]);
+		  
+	
+	  }
+	 
 	    
 	}
 
