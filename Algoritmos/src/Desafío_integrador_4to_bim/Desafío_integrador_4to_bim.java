@@ -33,7 +33,7 @@ public class Desafío_integrador_4to_bim {
 				intentos++;
 				System.out.println("\nLa cantidad de intentos es:" + intentos);
 
-				System.out.println("");
+			
 
 				if (numero < numeroSecreto) {
 
@@ -41,7 +41,7 @@ public class Desafío_integrador_4to_bim {
 
 				}
 
-				System.out.println("");
+				
 
 				if (numero > numeroSecreto) {
 

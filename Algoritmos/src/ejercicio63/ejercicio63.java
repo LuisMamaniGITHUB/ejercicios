@@ -9,26 +9,38 @@ public class ejercicio63 {
 		Scanner datos = new Scanner(System.in);
 		
 		
-		String correo;
-		char posicion;
-		int n1;
+	
+        String correo;
+        boolean correoValido = false;
+        while (correoValido == false) {
+            System.out.print("Ingresa tu correo electrónico: ");
+            correo = datos.nextLine();
+
+            if ( correo.indexOf("@") < correo.lastIndexOf(".") && correo.indexOf("@") > correo.lastIndexOf(".")) {
+                correoValido = true;
+            } else {
+                System.out.println("Correo electrónico no válido. Debe contener '@' y '.' ");
+            }
+        }
+
+   
+        String contraseña;
+        boolean contrasenaValida = false;
+        while (contrasenaValida == false) {
+            System.out.print("Ingresa tu contraseña: ");
+            contraseña = datos.nextLine();
+
+            if (contraseña.length() >= 6 && contraseña.length() <= 12) {
+                contrasenaValida = true;
+            } else {
+                System.out.println("Contraseña no válida. Debe tener entre 6 y 12 caracteres.");
+            }
+        }
+
 		
 		
-		System.out.println("\nIngrese su correo electronico: ");
-		correo = datos.next();
-		
-		System.out.println("cuantos caracteres tiene su correo: ");
-		n1 = datos.nextInt(); 
-		
-		posicion = correo.charAt(n1 - 1);
-		
-		while () ) {
-			
-			System.out.println();
-		}
 		
 		
-		System.out.println(": "+posicion);
 	}
 
 }
